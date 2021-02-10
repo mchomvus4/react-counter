@@ -4,20 +4,26 @@ import './Style.css'
   constructor(props){
    super(props)
    this.state = {
-    count: 0
+    count: 0,
+    bgColor:""
    }
   }
   incrementCount = ()=>{
     this.setState({
      count:this.state.count +1
     })
-    
+    if(count>=1){
+     bgColor="green"
+    }
   }
 
   decrementCount = ()=>{
    this.setState({
     count:this.state.count -1
    })
+   if(count<=-1){
+    bgColor="red"
+   }
   }
 
   resetCount = ()=>{
